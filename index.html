@@ -24,9 +24,16 @@
         <p class="lead">Pesquisa realizada com os alunos e ex-alunos do Instituto Federal Catarinense - Campus Concórdia apontou que 87,9% gostam do seu curso técnico, enquanto 58,4% pretendem seguir ou seguiram na área. A pesquisa ainda revelou os principais motivos que levaram os estudantes a escolherem seus cursos.</h3>
         <p class="autores">Por Gustavo Schwitzki Peretti, Heloísa Klumb, Inaê Karine Maziero Marchese e Thainá D'Agostini</p>
         <p>Postado em 31/07/2023 14:40:24 - Atualizado há 4 horas atrás</p>
-        <a class="localizacao" href="https://goo.gl/maps/zVFKkU81K6nvGaFZ7"><span class="material-symbols-outlined">location_on</span>Concórdia - SC</a>
+        <div class="links">
+            <a target="_blank" class="localizacao" href="https://goo.gl/maps/zVFKkU81K6nvGaFZ7"><span class="material-symbols-outlined">location_on</span>Concórdia - SC</a>
+            <div class="controls">
+                <span id="increase">A+</span>
+                <span id="decrease">A-</span>
+                <a href="" class="share"><span class="material-symbols-outlined">share</span></a>
+            </div>
+        </div>
         <div class="image-container">
-            <img width="700" src="img/banner-galeria.jpg" alt="">
+            <img src="img/banner-galeria.jpg" alt="">
         </div>
     </header>
     <main>
@@ -45,7 +52,16 @@
         <div class="video-container">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/IcJNJmJnrQE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
-        <!-- <iframe src="https://gifer.com/embed/Aq" width=480 height=270.000 frameBorder="0" allowFullScreen></iframe> --> -->
+
+        <div class="container-grafico">
+            <canvas width="100%" id="grafico"></canvas>
+        </div>
     </main>
+    <footer>
+        <div></div>
+        <div></div>
+        <div></div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.1.1/chart.umd.js"></script>    <script src="js/script.js"></script>
 </body>
 </html>
