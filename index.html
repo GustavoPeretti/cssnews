@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS News</title>
+    <link rel="shortcut icon" href="img/logo-azul.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +14,7 @@
 <body>
     <nav>
         <div class="upper-nav">
-            <a class="logo" href=""><img width="200" src="img/aaa-removebg-preview.png" alt=""></a>
+            <a class="logo" href=""><img width="200" src="img/logo.png" alt="CSS News"></a>
             <ul>
                 <li><a href="">Notícias</a></li>
                 <li><a href="">Reportagens</a></li>
@@ -43,13 +44,12 @@
             </div>
         </div>
         <div class="image-container">
-            <img src="img/banner-galeria.jpg" alt="">
+            <span>Fonte: dos autores</span>
+            <img src="img/banner.jpg" alt='Foto da entrada do IFC Concórdia. Na esquerda, há a placa do IFC, enquanto na direita há várias flores cor-de-rosa.'>
         </div>
     </header>
     <main>
-        
         <hr>
-
         <p>Cerca de 87,9% dos alunos e ex-alunos do Instituto Federal Catarinense - Campus Concórdia revelam gostar de seu curso técnico, segundo levantamento realizado pelo CSS News. A pesquisa, realizada através de um formulário distribuído aos alunos, contou com 149 respostas em um período de 15 dias, e ainda expôs os principais motivos que levaram os estudantes a escolher sua área e suas perspectivas futuras.</p>
         <p>O dado representa uma porcentagem relativamente alta em relação ao número de respostas, mostrando a satisfação dos estudantes do campus com a escolha do curso. Por outro lado, apenas 12,1% demonstraram insatisfação nesse quesito, mostrando que a formação atende às expectativas dos alunos e ex-alunos da instituição. Ainda, do total de pesquisados, 14,1% correspondem a ex-alunos, dado importante quando levado em conta experiências passadas na instituição.</p>
         <p>Outro dado importante revelado pela pesquisa diz respeito à continuidade da profissão após a conclusão do curso. Do total de pesquisados, 58,4% pretendem seguir ou seguiram em sua área de formação, buscando cursos superiores e vagas de trabalho direcionadas à mesma.  Esse número representa um dado positivo para a região, visto que a Instituição forma profissionais capacitados para atender a grande demanda de empregos nesses setores. Aliado ao gosto dos estudantes pelo curso, a tendência é que ocorra um aumento de profissionais formados atuantes  em suas áreas no município e na região como um todo.</p>
@@ -57,39 +57,26 @@
         <p>A pesquisa foi realizada através de um formulário, divulgado nos veículos de mídia mais populares entre os atuais e ex-estudantes da instituição, como Whatsapp, Instagram e Twitter, e ficou disponível durante o período de 15 dias. Além disso, um aluno de cada curso técnico foi entrevistado, com objetivo de visualizar como o IFC atua na vida acadêmica dos mesmos.</p>
         <p>Atualmente, o campus conta com três cursos técnicos integrados ao ensino médio, sendo eles: Técnico em Agropecuária, Técnico em Alimentos e Técnico em Informática para Internet, disponibilizando, por ano, um total 210 vagas, sendo 140 delas destinadas ao curso de agropecuária e 35 para cada turma de alimentos e informática. A seleção dos estudantes acontece através de uma prova classificatória, aplicada no final do ano anterior ao ingresso. Logo, o campus contempla, atualmente, aproximadamente 630 estudantes do ensino médio técnico, “com previsão para o aumento já para o próximo ano”, como pontua o diretor geral do campus, Rudinei Kock.</p>
         <p>Em entrevista realizada com os alunos, a estudante Maria Clara Schneider destaca a importância do ensino do IFC para a formação dos estudantes:  “É uma instituição pública e de qualidade, e não tem nem comparação com outras escolas, a gente vê que o ensino aqui é muito mais qualificado, e dá muita oportunidade para o aluno ter noção da vida real e da vida profissional, no mercado de trabalho principalmente.” Maria, que cursa o 3° ano de Alimentos, ainda pontua a importância do curso técnico voltado para a área da química de alimentos:  “Para quem segue na área é muito bom, muito importante. Para quem não segue, é um conhecimento para nossa vida pessoal, não necessariamente para a vida profissional”.</p>
-        
-
         <div class="video-container">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/IcJNJmJnrQE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
-
-        <div style="display: none;" class="carrossel">
-            <span class="material-symbols-outlined">chevron_left</span>
-            <div class="graficos">
-                <div id="container-agropecuaria" class="container-grafico">
-                    <h2>Relação de alunos e ex-alunos de Agropecuária com o curso</h2>
-                    <canvas width="200" id="agropecuaria"></canvas>
-                </div>
-                <div id="container-alimentos" class="container-grafico" style="display: none;">
-                    <h2>Relação de alunos e ex-alunos de Alimentos com o curso</h2>
-                    <canvas width="200" id="alimentos"></canvas>
-                </div>
-                <div id="container-informatica" class="container-grafico" style="display: none;">
-                    <h2>Relação de alunos e ex-alunos de Informática para Internet com o curso</h2>
-                    <canvas width="200" id="informatica"></canvas>
-                </div>
-            </div>
-            <span class="material-symbols-outlined">chevron_right</span>
-        </div>
     </main>
     <footer>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div><a href=""><img src="img/logo-branca.png" class="logo" alt=""></a></div>
+        <div>
+            <ul>
+                <li><a href="">Notícias</a></li>
+                <li><a href="">Reportagens</a></li>
+                <li><a href="">Editorial</a></li>
+            </ul>
+        </div>
+        <div>
+            <a href="#">
+                <img width="100" class="voltar" src="img/voltar.png" alt="Voltar ao início">
+            </a>
+        </div>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.1.1/chart.umd.js"></script>
     <script src="js/fontSizeHandling.js"></script>
-    <script src="js/graphics.js"></script>
     <script src="js/responsivity.js"></script>
 </body>
 </html>

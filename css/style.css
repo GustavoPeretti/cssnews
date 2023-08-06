@@ -1,6 +1,10 @@
 * {
     box-sizing: border-box;
- }
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
@@ -23,13 +27,19 @@ nav .upper-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
 }
 
 nav .lower-nav {
     display: none;
     position: relative;
-    animation: navAppear 0.5s;
+}
+
+.opening-nav {
+    animation: nav-appear .5s;
+}
+
+.closing-nav {
+    animation: nav-appear reverse .5s;
 }
 
 nav span {
@@ -137,7 +147,12 @@ header .image-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     margin-top: 2em;
+}
+
+header .image-container span {
+    align-self: baseline;
 }
 
 header .image-container img {
@@ -154,27 +169,44 @@ main .video-container {
     align-items: center;
 }
 
-main .carrossel {
+footer {
+    background-color: #4bbde0;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.397);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+
+footer > * {
+    width: 33.33%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-main .carrossel h2 {
+footer .logo {
+    width: 10em;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    font-weight: bolder;
+}
+
+footer ul li {
+    margin: 0.5em 0;
     text-align: center;
 }
 
-main .carrossel .container-grafico {
-    margin: 0 15em;
+footer ul li a {
+    color: white;
+    text-decoration: none;
 }
 
-main .carrossel span {
+footer .voltar {
     cursor: pointer;
-}
-
-footer {
-    background-color: #4bbde0;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.397);
 }
 
 @media (width <= 1200px) {
@@ -217,13 +249,22 @@ footer {
     header, main {
         margin: 0 2em;
     }
+
+    footer {
+        flex-direction: column;
+    }
+
+    footer > * {
+        width: 100%;
+    }
 }
 
-@keyframes navAppear {
+@keyframes nav-appear {
     0% {
-        bottom: 1000px;
+        bottom: 250px;
         height: 0;
     }
+
     100% {
         bottom: 0px;
         height: 3.4em;

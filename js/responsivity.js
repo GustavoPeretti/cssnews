@@ -17,10 +17,21 @@ window.onresize = () => {
     }
 };
 
+let preventClick;
+
 hamburguerButton.addEventListener('click', () => {
-    if (lowerNav.style.display == 'none') {
-        lowerNav.style.display = 'block';
+    if (preventClick) {
         return;
     }
-    lowerNav.style.display = 'none';
+    preventClick = true;
+    if (lowerNav.style.display == 'none') {
+        lowerNav.classList.toggle('opening-nav');
+        lowerNav.style.display = 'block';
+        setTimeout(() => {lowerNav.classList.remove('opening-nav');}, 500);
+        preventClick = false;
+        return;
+    }
+    lowerNav.classList.toggle('closing-nav');
+    setTimeout(() => {lowerNav.style.display = 'none'; lowerNav.classList.remove('closing-nav');}, 500);
+    preventClick = false;
 });
