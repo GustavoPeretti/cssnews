@@ -12,16 +12,26 @@
 </head>
 <body>
     <nav>
-        <a class="logo" href=""><img width="200" src="img/aaa-removebg-preview.png" alt=""></a>
-        <ul>
-            <li><a href="">Notícias</a></li>
-            <li><a href="">Reportagens</a></li>
-            <li><a href="">Editorial</a></li>
-        </ul>
+        <div class="upper-nav">
+            <a class="logo" href=""><img width="200" src="img/aaa-removebg-preview.png" alt=""></a>
+            <ul>
+                <li><a href="">Notícias</a></li>
+                <li><a href="">Reportagens</a></li>
+                <li><a href="">Editorial</a></li>
+            </ul>
+            <span class="material-symbols-outlined">menu</span>
+        </div>
+        <div class="lower-nav">
+            <ul>
+                <li><a href="">Notícias</a></li>
+                <li><a href="">Reportagens</a></li>
+                <li><a href="">Editorial</a></li>
+            </ul>
+        </div>
     </nav>
     <header>
         <h1>87,9% dos alunos do IFC Concórdia dizem gostar de seu curso técnico, aponta pesquisa</h1>
-        <p class="lead">Pesquisa realizada com os alunos e ex-alunos do Instituto Federal Catarinense - Campus Concórdia apontou que 87,9% gostam do seu curso técnico, enquanto 58,4% pretendem seguir ou seguiram na área. A pesquisa ainda revelou os principais motivos que levaram os estudantes a escolherem seus cursos.</h3>
+        <p class="lead">Pesquisa realizada com os alunos e ex-alunos do Instituto Federal Catarinense - Campus Concórdia apontou que 87,9% gostam do seu curso técnico, enquanto 58,4% pretendem seguir ou seguiram na área. A pesquisa ainda revelou os principais motivos que levaram os estudantes a escolherem seus cursos.</p>
         <p class="autores">Por Gustavo Schwitzki Peretti, Heloísa Klumb, Inaê Karine Maziero Marchese e Thainá D'Agostini</p>
         <p>Postado em 31/07/2023 14:40:24 - Atualizado há 4 horas atrás</p>
         <div class="links">
@@ -53,8 +63,23 @@
             <iframe width="560" height="315" src="https://www.youtube.com/embed/IcJNJmJnrQE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
 
-        <div class="container-grafico">
-            <canvas width="100%" id="grafico"></canvas>
+        <div style="display: none;" class="carrossel">
+            <span class="material-symbols-outlined">chevron_left</span>
+            <div class="graficos">
+                <div id="container-agropecuaria" class="container-grafico">
+                    <h2>Relação de alunos e ex-alunos de Agropecuária com o curso</h2>
+                    <canvas width="200" id="agropecuaria"></canvas>
+                </div>
+                <div id="container-alimentos" class="container-grafico" style="display: none;">
+                    <h2>Relação de alunos e ex-alunos de Alimentos com o curso</h2>
+                    <canvas width="200" id="alimentos"></canvas>
+                </div>
+                <div id="container-informatica" class="container-grafico" style="display: none;">
+                    <h2>Relação de alunos e ex-alunos de Informática para Internet com o curso</h2>
+                    <canvas width="200" id="informatica"></canvas>
+                </div>
+            </div>
+            <span class="material-symbols-outlined">chevron_right</span>
         </div>
     </main>
     <footer>
@@ -62,6 +87,9 @@
         <div></div>
         <div></div>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.1.1/chart.umd.js"></script>    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.1.1/chart.umd.js"></script>
+    <script src="js/fontSizeHandling.js"></script>
+    <script src="js/graphics.js"></script>
+    <script src="js/responsivity.js"></script>
 </body>
 </html>

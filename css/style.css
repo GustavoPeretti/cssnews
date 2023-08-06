@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+ }
+
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
@@ -6,11 +10,30 @@ body {
 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
     padding: 0 4em;
     background-color: #4bbde0;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.397);
+}
+
+nav .upper-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+nav .lower-nav {
+    display: none;
+    position: relative;
+    animation: navAppear 0.5s;
+}
+
+nav span {
+    display: none !important;
 }
 
 nav ul {
@@ -131,8 +154,22 @@ main .video-container {
     align-items: center;
 }
 
-main .container-grafico {
+main .carrossel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .carrossel h2 {
+    text-align: center;
+}
+
+main .carrossel .container-grafico {
     margin: 0 15em;
+}
+
+main .carrossel span {
+    cursor: pointer;
 }
 
 footer {
@@ -140,3 +177,55 @@ footer {
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.397);
 }
 
+@media (width <= 1200px) {
+   main {
+    margin: 0 9em;
+   } 
+}
+
+@media (width <= 745px) {
+    nav {
+        position: fixed;
+        width: 100%;
+        z-index: 30;
+    }
+    
+    header {
+        margin: 0 5em;
+    }
+
+    header h1 {
+        margin-top: 2em;
+    }
+
+    nav .upper-nav ul {
+        display: none;   
+    }
+
+    nav span {
+        display: inline !important; 
+        width: 4em;
+        color: white;
+        cursor: pointer;
+    }
+    main {
+        margin: 0 5em;
+    } 
+}
+
+@media (width <= 450px) {
+    header, main {
+        margin: 0 2em;
+    }
+}
+
+@keyframes navAppear {
+    0% {
+        bottom: 1000px;
+        height: 0;
+    }
+    100% {
+        bottom: 0px;
+        height: 3.4em;
+    }
+}
