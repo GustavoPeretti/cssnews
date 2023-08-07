@@ -1,0 +1,45 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 10em;
+}
+
+header h1 {
+    font-size: 3em;
+    color: black;
+}
+
+header .missao-visao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25em;
+    width: 30em;
+}
+
+header .missao-visao img {
+    width: 8em;
+    margin-right: 1em;
+}
+
+header .missao-visao div p span {
+    font-weight: bold;
+}
+
+header .missao-visao div p {
+    transition: .5s;
+}
+
+header .missao-visao div p:hover {
+    margin-left: 0.1em;
+}
+
+main {
+    margin: 0 20em;
+}
+
+hr {
+    margin: 2em 0;
+}

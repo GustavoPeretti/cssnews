@@ -1,0 +1,56 @@
+@media (width <= 1200px) {
+    main {
+     margin: 0 9em;
+    } 
+ }
+ 
+@media (width <= 900px) {
+    .missao-visao {
+        flex-direction: column;
+        max-width: 15em;
+    }
+}
+
+ @media (width <= 745px) {
+     nav {
+         position: fixed;
+         width: 100%;
+         z-index: 30;
+     }
+     
+     header {
+         margin: 0 5em;
+     }
+ 
+     header h1 {
+         margin-top: 2em;
+     }
+ 
+     nav .upper-nav ul {
+         display: none;   
+     }
+ 
+     nav span {
+         display: inline !important; 
+         width: 4em;
+         color: white;
+         cursor: pointer;
+     }
+     main {
+         margin: 0 5em;
+     } 
+ }
+ 
+ @media (width <= 450px) {
+     header, main {
+         margin: 0 2em;
+     }
+ 
+     footer {
+         flex-direction: column;
+     }
+ 
+     footer > * {
+         width: 100%;
+     }
+ }
